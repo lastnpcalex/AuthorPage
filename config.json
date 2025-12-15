@@ -12,8 +12,8 @@
     {
       "id": "blueky",
       "label": "ATProto",
-      "url": "https://deer.social/profile/lastnpcalex.agency",
-      "icon": "◫",
+      "url": "https://bsky.app/profile/lastnpcalex.agency",
+      "icon": "◬",
       "desc": "@lastnpcalex.agency"
     },
 
@@ -28,28 +28,21 @@
       "id": "signal",
       "label": "SIGNAL ME",
       "url": "https://signal.me/#eu/bVpg4VupNe9Q0tRJ0SG9xRengy3KtBCee4-z6WkydnrZ6Z7xQuRMVLHEep9dWXHm",
-      "icon": "◇",
+      "icon": "◈",
       "desc": "encrypted contact"
     },
         {
-      "id": "github",
-      "label": "GITHUB",
-      "url": "https://github.com/lastnpcalex",
-      "icon": "⎔",
-      "desc": "open source tools"
-    },
-        {
       "id": "author",
-      "label": "AUthor Link Page",
+      "label": "A Mote in Shadow",
       "url": "https://lastnpcalex.agency",
-      "icon": "⬡",
-      "desc": "Author Link Page"
+      "icon": "🕮",
+      "desc": "Links for Book 1 in EXU Series"
     },
         {
-      "id": "theory",
-      "label": "THEORY ARCHIVE",
+      "id": "future",
+      "label": "SPECULATIVE FUTURES",
       "url": "https://example.com/archive",
-      "icon": "◈",
+      "icon": "⌥",
       "desc": "collected transmissions"
     }
   ],
