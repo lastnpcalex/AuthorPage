@@ -296,6 +296,24 @@
       text-shadow: 0 0 20px var(--cyan);
     }
 
+    .author-avatar img {
+      position: absolute;
+      inset: 3px;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      object-fit: cover;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      z-index: 2;
+    }
+
+    .author-avatar.has-image span {
+      display: none;
+    }
+
+    .author-avatar.has-image::after {
+      display: none;
+    }
+
     .author-info h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 32px;
@@ -945,6 +963,22 @@
       document.getElementById('author-tagline').textContent = author.tagline;
       document.getElementById('author-avatar').textContent = author.avatar;
       document.title = `${author.handle} // Network Node`;
+
+      // Load avatar image if specified
+      if (author.avatar_image) {
+        const avatarContainer = document.querySelector('.author-avatar');
+        const img = document.createElement('img');
+        img.src = author.avatar_image;
+        img.alt = author.name;
+        img.onload = () => {
+          avatarContainer.classList.add('has-image');
+          avatarContainer.appendChild(img);
+        };
+        img.onerror = () => {
+          // Fall back to text avatar if image fails to load
+          console.warn('Avatar image failed to load, using text fallback');
+        };
+      }
     }
 
     async function loadBio() {
