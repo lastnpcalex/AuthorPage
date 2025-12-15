@@ -22,7 +22,7 @@
       "label": "EMAIL",
       "url": "ex.astris.umbra@gmail.com",
       "icon": "◇",
-      "desc": "encrypted contact"
+      "desc": "unencrypted contact"
     },
     {
       "id": "signal",
