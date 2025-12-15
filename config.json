@@ -20,7 +20,7 @@
         {
       "id": "email",
       "label": "EMAIL",
-      "url": "ex.astris.umbra@gmail.com",
+      "url": "mailto:ex.astris.umbra@gmail.com",
       "icon": "◇",
       "desc": "unencrypted contact"
     },
@@ -39,11 +39,11 @@
       "desc": "open source tools"
     },
         {
-      "id": "arena",
-      "label": "ARE.NA",
-      "url": "https://are.na/example",
+      "id": "author",
+      "label": "AUthor Link Page",
+      "url": "https://lastnpcalex.agency",
       "icon": "⬡",
-      "desc": "research channels"
+      "desc": "Author Link Page"
     },
         {
       "id": "theory",
