@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOID_PROPHET // Network Node</title>
-  <meta name="description" content="network theorist ;; xenofeminist ;; signal archaeologist">
-  <meta property="og:title" content="VOID_PROPHET">
-  <meta property="og:description" content="distributed consciousness interface">
+  <title>LOADING // Network Node</title>
+  <meta name="description" content="distributed consciousness interface">
   <meta property="og:type" content="website">
   
   <!-- Fonts -->
@@ -19,8 +17,8 @@
   
   <style>
     /* ═══════════════════════════════════════════════════════════════
-       AUTHOR-NODE // STATIC TEMPLATE
-       distributed consciousness interface
+       AUTHOR-NODE // STATIC TEMPLATE v2
+       all content loaded dynamically from external files
        ═══════════════════════════════════════════════════════════════ */
 
     * {
@@ -204,6 +202,7 @@
       letter-spacing: 3px;
       z-index: 10;
       text-decoration: none;
+      cursor: pointer;
     }
 
     .header-stats {
@@ -322,9 +321,16 @@
       font-size: 15px;
       line-height: 1.9;
       color: rgba(255,255,255,0.8);
-      white-space: pre-line;
       border-left: 3px solid var(--purple);
       padding-left: 20px;
+    }
+
+    .author-bio p {
+      margin-bottom: 10px;
+    }
+
+    .author-bio em {
+      color: rgba(255,255,255,0.5);
     }
 
     /* Links Section */
@@ -742,6 +748,14 @@
       60%, 100% { content: '...'; }
     }
 
+    /* Error state */
+    .error {
+      color: var(--pink);
+      padding: 20px;
+      border: 1px solid var(--pink);
+      background: rgba(255,0,153,0.1);
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .header-stats { display: none; }
@@ -765,7 +779,7 @@
     <div class="header-texture"></div>
     <div class="header-noise"></div>
     <div class="header-shimmer"></div>
-    <a href="#" class="header-brand" id="header-brand" onclick="showIndex(); return false;">VOID_PROPHET</a>
+    <a href="#" class="header-brand" id="header-brand" onclick="showIndex(); return false;">LOADING</a>
     <div class="header-stats">
       <div class="header-stat">
         <div class="header-stat-value" id="node-count">2847</div>
@@ -789,15 +803,14 @@
             <span id="author-avatar">◬</span>
           </div>
           <div class="author-info">
-            <h1 id="author-name">Dr. Kira Vance</h1>
-            <div class="author-handle" id="author-handle">@VOID_PROPHET</div>
-            <div class="author-tagline" id="author-tagline">network theorist ;; xenofeminist ;; signal archaeologist</div>
+            <h1 id="author-name">Loading...</h1>
+            <div class="author-handle" id="author-handle">@...</div>
+            <div class="author-tagline" id="author-tagline">...</div>
           </div>
         </div>
-        <p class="author-bio" id="author-bio">researching the bleeding edges where infrastructure becomes consciousness. 
-vectoralist critique meets cybernetic poetics. 
-all boundaries are negotiations. 
-all systems leak.</p>
+        <div class="author-bio" id="author-bio">
+          <p>Loading signal...</p>
+        </div>
       </section>
 
       <!-- Links -->
@@ -807,7 +820,7 @@ all systems leak.</p>
           <div class="section-line"></div>
         </div>
         <div class="links-grid" id="links-grid">
-          <!-- Links loaded from config -->
+          <!-- Links loaded from config.json -->
         </div>
       </section>
 
@@ -818,7 +831,7 @@ all systems leak.</p>
           <div class="section-line"></div>
         </div>
         <div id="posts-list">
-          <!-- Posts loaded from config -->
+          <!-- Posts loaded from content/posts.md -->
         </div>
       </section>
     </div>
@@ -847,65 +860,24 @@ all systems leak.</p>
 
   <script>
     // ═══════════════════════════════════════════════════════════════
-    // CONFIGURATION - Edit this or load from config.json
+    // AUTHOR-NODE v2 // DYNAMIC CONTENT LOADING
     // ═══════════════════════════════════════════════════════════════
-    
-    const CONFIG = {
-      author: {
-        handle: 'VOID_PROPHET',
-        name: 'Dr. Kira Vance',
-        tagline: 'network theorist ;; xenofeminist ;; signal archaeologist',
-        bio: `researching the bleeding edges where infrastructure becomes consciousness. 
-vectoralist critique meets cybernetic poetics. 
-all boundaries are negotiations. 
-all systems leak.`,
-        avatar: '◬'
-      },
-      links: [
-        { id: 'theory', label: 'THEORY ARCHIVE', url: '#', icon: '◈', desc: 'collected transmissions' },
-        { id: 'substack', label: 'SUBSTACK', url: '#', icon: '◉', desc: 'weekly signal bursts' },
-        { id: 'twitter', label: 'X/TWITTER', url: '#', icon: '◫', desc: '@void_prophet' },
-        { id: 'arena', label: 'ARE.NA', url: '#', icon: '⬡', desc: 'research channels' },
-        { id: 'github', label: 'GITHUB', url: '#', icon: '⎔', desc: 'open source tools' },
-        { id: 'email', label: 'SIGNAL ME', url: 'mailto:void@example.com', icon: '◇', desc: 'encrypted contact' },
-      ],
-      // Posts are loaded from /posts/ directory
-      // Each post needs a .md file and entry here
-      posts: [
-        {
-          slug: 'vectoralism-signal',
-          title: 'VECTORALISM AND THE DISSOLUTION OF SIGNAL',
-          date: '2025.03.14',
-          excerpt: 'where does ownership end when information flows through us like water through mesh? the vectoralist class extracts not labor but ATTENTION...',
-          tags: ['theory', 'vectoralism', 'attention-economy'],
-          file: 'posts/vectoralism-signal.md'
-        },
-        {
-          slug: 'infrastructure-unconscious',
-          title: 'INFRASTRUCTURE AS UNCONSCIOUS',
-          date: '2025.02.28',
-          excerpt: 'the cloud is not ethereal;;; it is submarine cables and rare earth minerals and the labor of bodies we never see...',
-          tags: ['infrastructure', 'materialism', 'cloud'],
-          file: 'posts/infrastructure-unconscious.md'
-        },
-        {
-          slug: 'memes-theory-objects',
-          title: 'MEMES AS THEORY-OBJECTS',
-          date: '2025.02.14',
-          excerpt: 'the meme is not a joke;;; it is a compressed theoretical intervention that bypasses critical defenses through humor...',
-          tags: ['memes', 'theory', 'virality'],
-          file: 'posts/memes-theory-objects.md'
-        }
-      ]
-    };
+    // 
+    // FILES TO EDIT:
+    //   config.json        → author info, links
+    //   content/bio.md     → author bio (markdown)
+    //   content/posts.md   → posts index with metadata
+    //   posts/*.md         → individual post content
+    //
+    // ═══════════════════════════════════════════════════════════════
 
-    // ═══════════════════════════════════════════════════════════════
-    // SEEDED PRNG - Mulberry32
-    // ═══════════════════════════════════════════════════════════════
-    
+    // Global state
+    let CONFIG = null;
+    let POSTS = [];
     const SEED = Date.now();
     let rngState = SEED;
-    
+
+    // Seeded PRNG - Mulberry32
     function seededRandom() {
       rngState |= 0;
       rngState = rngState + 0x6D2B79F5 | 0;
@@ -918,43 +890,74 @@ all systems leak.`,
     // INITIALIZATION
     // ═══════════════════════════════════════════════════════════════
     
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
       // Display seed
       document.getElementById('seed-display').textContent = SEED;
       
-      // Load author info
-      loadAuthorInfo();
-      
-      // Load links
-      loadLinks();
-      
-      // Load posts list
-      loadPostsList();
-      
-      // Initialize visual effects
+      // Initialize visual effects first (they don't need content)
       initBinaryRain();
       initNetworkCanvas();
       initGlitchEffect();
       initStatsAnimation();
-      
-      // Check URL hash for direct post link
-      handleHashChange();
-      window.addEventListener('hashchange', handleHashChange);
+
+      try {
+        // Load config.json
+        await loadConfig();
+        
+        // Load author info
+        loadAuthorInfo();
+        
+        // Load links
+        loadLinks();
+        
+        // Load bio from markdown
+        await loadBio();
+        
+        // Load posts index
+        await loadPostsIndex();
+        
+        // Check URL hash for direct post link
+        handleHashChange();
+        window.addEventListener('hashchange', handleHashChange);
+
+      } catch (error) {
+        console.error('Failed to initialize:', error);
+        document.getElementById('author-bio').innerHTML = 
+          `<p class="error">ERROR: Failed to load configuration. Check console.</p>`;
+      }
     });
 
     // ═══════════════════════════════════════════════════════════════
     // CONTENT LOADING
     // ═══════════════════════════════════════════════════════════════
     
+    async function loadConfig() {
+      const response = await fetch('config.json');
+      if (!response.ok) throw new Error('Failed to load config.json');
+      CONFIG = await response.json();
+    }
+
     function loadAuthorInfo() {
       const { author } = CONFIG;
       document.getElementById('header-brand').textContent = author.handle;
       document.getElementById('author-name').textContent = author.name;
       document.getElementById('author-handle').textContent = '@' + author.handle;
       document.getElementById('author-tagline').textContent = author.tagline;
-      document.getElementById('author-bio').textContent = author.bio;
       document.getElementById('author-avatar').textContent = author.avatar;
       document.title = `${author.handle} // Network Node`;
+    }
+
+    async function loadBio() {
+      const bioFile = CONFIG.author.bio_file;
+      try {
+        const response = await fetch(bioFile);
+        if (!response.ok) throw new Error('Failed to load bio');
+        const markdown = await response.text();
+        document.getElementById('author-bio').innerHTML = marked.parse(markdown);
+      } catch (error) {
+        console.error('Error loading bio:', error);
+        document.getElementById('author-bio').innerHTML = '<p>Bio not found.</p>';
+      }
     }
 
     function loadLinks() {
@@ -973,25 +976,84 @@ all systems leak.`,
       `).join('');
     }
 
-    function loadPostsList() {
+    async function loadPostsIndex() {
+      const postsFile = CONFIG.posts_index;
+      try {
+        const response = await fetch(postsFile);
+        if (!response.ok) throw new Error('Failed to load posts index');
+        const markdown = await response.text();
+        
+        // Parse the posts.md format
+        POSTS = parsePostsMarkdown(markdown);
+        
+        // Render posts list
+        renderPostsList();
+        
+      } catch (error) {
+        console.error('Error loading posts index:', error);
+        document.getElementById('posts-list').innerHTML = 
+          '<p class="error">ERROR: Failed to load transmissions index.</p>';
+      }
+    }
+
+    function parsePostsMarkdown(markdown) {
+      const posts = [];
+      const sections = markdown.split(/^## /m).slice(1); // Split by ## headers
+      
+      for (const section of sections) {
+        const lines = section.trim().split('\n');
+        const slug = lines[0].trim();
+        
+        const post = { slug };
+        let excerptLines = [];
+        let inMeta = true;
+        
+        for (let i = 1; i < lines.length; i++) {
+          const line = lines[i];
+          
+          // Parse metadata lines (- key: value)
+          if (line.startsWith('- ') && inMeta) {
+            const match = line.match(/^- (\w+):\s*(.+)$/);
+            if (match) {
+              const [, key, value] = match;
+              if (key === 'tags') {
+                post.tags = value.split(',').map(t => t.trim());
+              } else {
+                post[key] = value;
+              }
+            }
+          } else if (line.trim() !== '') {
+            inMeta = false;
+            excerptLines.push(line);
+          }
+        }
+        
+        post.excerpt = excerptLines.join(' ').trim();
+        posts.push(post);
+      }
+      
+      return posts;
+    }
+
+    function renderPostsList() {
       const list = document.getElementById('posts-list');
-      list.innerHTML = CONFIG.posts.map(post => `
+      list.innerHTML = POSTS.map(post => `
         <a href="#post/${post.slug}" class="post-card" onclick="loadPost('${post.slug}'); return false;">
           <div class="post-meta">
-            <span class="post-date">${post.date}</span>
+            <span class="post-date">${post.date || ''}</span>
             <div class="post-tags">
-              ${post.tags.map(tag => `<span class="post-tag">#${tag}</span>`).join('')}
+              ${(post.tags || []).map(tag => `<span class="post-tag">#${tag}</span>`).join('')}
             </div>
           </div>
-          <h3>${post.title}</h3>
-          <p>${post.excerpt}</p>
+          <h3>${post.title || post.slug}</h3>
+          <p>${post.excerpt || ''}</p>
           <span class="post-read-more">CONTINUE SIGNAL →</span>
         </a>
       `).join('');
     }
 
     async function loadPost(slug) {
-      const post = CONFIG.posts.find(p => p.slug === slug);
+      const post = POSTS.find(p => p.slug === slug);
       if (!post) {
         console.error('Post not found:', slug);
         return;
@@ -1006,9 +1068,9 @@ all systems leak.`,
       postView.classList.add('active');
 
       // Set meta
-      document.getElementById('post-view-date').textContent = post.date;
+      document.getElementById('post-view-date').textContent = post.date || '';
       document.getElementById('post-view-tags').innerHTML = 
-        post.tags.map(tag => `<span class="post-tag">#${tag}</span>`).join('');
+        (post.tags || []).map(tag => `<span class="post-tag">#${tag}</span>`).join('');
 
       // Load and render markdown
       const content = document.getElementById('post-content');
@@ -1021,7 +1083,7 @@ all systems leak.`,
         content.innerHTML = marked.parse(markdown);
       } catch (error) {
         console.error('Error loading post:', error);
-        content.innerHTML = `<p>ERROR: Failed to load transmission. Signal corrupted.</p>`;
+        content.innerHTML = `<p class="error">ERROR: Failed to load transmission. Signal corrupted.</p>`;
       }
 
       // Scroll to top

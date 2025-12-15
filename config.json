@@ -1,0 +1,56 @@
+{
+  "author": {
+    "handle": "VOID_PROPHET",
+    "name": "Dr. Kira Vance",
+    "tagline": "network theorist ;; xenofeminist ;; signal archaeologist",
+    "avatar": "◬",
+    "bio_file": "content/bio.md"
+  },
+  
+  "links": [
+    {
+      "id": "theory",
+      "label": "THEORY ARCHIVE",
+      "url": "https://example.com/archive",
+      "icon": "◈",
+      "desc": "collected transmissions"
+    },
+    {
+      "id": "substack",
+      "label": "SUBSTACK",
+      "url": "https://substack.com/@example",
+      "icon": "◉",
+      "desc": "weekly signal bursts"
+    },
+    {
+      "id": "twitter",
+      "label": "X/TWITTER",
+      "url": "https://twitter.com/example",
+      "icon": "◫",
+      "desc": "@void_prophet"
+    },
+    {
+      "id": "arena",
+      "label": "ARE.NA",
+      "url": "https://are.na/example",
+      "icon": "⬡",
+      "desc": "research channels"
+    },
+    {
+      "id": "github",
+      "label": "GITHUB",
+      "url": "https://github.com/example",
+      "icon": "⎔",
+      "desc": "open source tools"
+    },
+    {
+      "id": "email",
+      "label": "SIGNAL ME",
+      "url": "mailto:void@example.com",
+      "icon": "◇",
+      "desc": "encrypted contact"
+    }
+  ],
+
+  "posts_index": "content/posts.md"
+}
