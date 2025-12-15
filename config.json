@@ -45,6 +45,13 @@
       "url": "https://example.com/archive",
       "icon": "⌥",
       "desc": "collected transmissions"
+    },
+       {
+      "id": "maps",
+      "label": "SPECULATIVE MAPS",
+      "url": "https://maps.lastnpcalex.agency/",
+      "icon": "✧",
+      "desc": "maps from fictional worlds"
     }
   ],
 
