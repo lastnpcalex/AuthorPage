@@ -8,47 +8,49 @@
   },
   
   "links": [
+
     {
-      "id": "theory",
-      "label": "THEORY ARCHIVE",
-      "url": "https://example.com/archive",
-      "icon": "◈",
-      "desc": "collected transmissions"
-    },
-    {
-      "id": "substack",
-      "label": "SUBSTACK",
-      "url": "https://substack.com/@example",
-      "icon": "◉",
-      "desc": "weekly signal bursts"
-    },
-    {
-      "id": "twitter",
-      "label": "X/TWITTER",
-      "url": "https://twitter.com/example",
+      "id": "blueky",
+      "label": "ATProto",
+      "url": "https://deer.social/lastnpcalex.agency",
       "icon": "◫",
-      "desc": "@void_prophet"
+      "desc": "@lastnpcalex.agency"
+    },
+
+        {
+      "id": "email",
+      "label": "EMAIL",
+      "url": "ex.astris.umbra@gmail.com",
+      "icon": "◇",
+      "desc": "encrypted contact"
     },
     {
+      "id": "signal",
+      "label": "SIGNAL ME",
+      "url": "https://signal.me/#eu/bVpg4VupNe9Q0tRJ0SG9xRengy3KtBCee4-z6WkydnrZ6Z7xQuRMVLHEep9dWXHm",
+      "icon": "◇",
+      "desc": "encrypted contact"
+    },
+        {
+      "id": "github",
+      "label": "GITHUB",
+      "url": "https://github.com/lastnpcalex",
+      "icon": "⎔",
+      "desc": "open source tools"
+    },
+        {
       "id": "arena",
       "label": "ARE.NA",
       "url": "https://are.na/example",
       "icon": "⬡",
       "desc": "research channels"
     },
-    {
-      "id": "github",
-      "label": "GITHUB",
-      "url": "https://github.com/example",
-      "icon": "⎔",
-      "desc": "open source tools"
-    },
-    {
-      "id": "email",
-      "label": "SIGNAL ME",
-      "url": "mailto:void@example.com",
-      "icon": "◇",
-      "desc": "encrypted contact"
+        {
+      "id": "theory",
+      "label": "THEORY ARCHIVE",
+      "url": "https://example.com/archive",
+      "icon": "◈",
+      "desc": "collected transmissions"
     }
   ],
 
